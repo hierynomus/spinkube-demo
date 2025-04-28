@@ -11,6 +11,14 @@ env:
   REGISTRY: ghcr.io
   REPO: ${{ github.repository }}
 
+
+permissions:
+  packages: write
+  statuses: write
+  checks: write
+  contents: write
+
+
 jobs:
     build-container:
         name: 'Build & push image'
