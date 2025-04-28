@@ -1,0 +1,16 @@
+[package]
+name = "hello_spin"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+spin-sdk = "2.0.0"
+anyhow = "1.0"
+http = "0.2"
+
+[profile.release]
+lto = true
+opt-level = "z"
