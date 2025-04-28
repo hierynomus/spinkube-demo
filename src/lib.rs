@@ -4,7 +4,7 @@ use spin_sdk::http_component;
 
 #[http_component]
 fn handle_hello(_req: Request) -> Result<Response> {
-    Ok(http::Response::builder()
+    Ok(Response::builder()
         .status(200)
-        .body(Some("👋 Hello from Cargo + Spin SDK!".into()))?)
+        .body("👋 Hello from Cargo + Spin SDK!").build())
 }
